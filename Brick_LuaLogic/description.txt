@@ -1,0 +1,4 @@
+Title: Lua Logic
+Author: Eagle517 (25351), with help from: Redo (12878), Entity (49803)
+https://github.com/Eagle517/BL-Lua-Logic
+Lets you simulate logic circuits in Blockland while using Lua as the backend for performance.
