@@ -32,12 +32,6 @@ schedule(0, 0, "lualogic_loadprintsandcolors");
 
 package LuaLogic
 {
-	// function onMissionLoaded()
-	// {
-	// 	parent::onMissionLoaded();
-	// 	lualogic_loadprintsandcolors();
-	// }
-
 	function onServerDestroyed()
 	{
 		deleteVariables("$LuaLogic*");

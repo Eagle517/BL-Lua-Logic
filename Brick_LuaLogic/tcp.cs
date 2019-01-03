@@ -5,7 +5,6 @@ function LuaLogicTCP::sendData(%this)
 
 	if(%this.data !$= "")
 	{
-		//lualogic_print("sent: " @ %this.data);
 		%this.send(%this.data @ "\n");
 		%this.data = "";
 	}
@@ -13,7 +12,6 @@ function LuaLogicTCP::sendData(%this)
 
 function LuaLogicTCP::onConnected(%this)
 {
-	CDevCubes();
 	lualogic_print("tcp connected");
 	
 	%this.data = "";
@@ -105,14 +103,7 @@ function LuaLogicTCP::onLine(%this, %line)
 				
 				%data = nextToken(%data, brick, "\t");
 			}
-		case "C":
-			%pos = getField(%line, 1);
-			echo(%line);
-			DevCube(lualogic_postobrick(%pos)).setScale("0.5 0.5 0.5");
 	}
-
-	// if(%dontShow == false)
-	// 	lualogic_print("tcp received: " @ %line);
 }
 
 function LuaLogicTCP::onConnectFailed(%this)
