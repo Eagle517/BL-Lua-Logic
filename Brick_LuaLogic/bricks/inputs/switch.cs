@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(Logic1x2fSwitchData)
+datablock fxDTSBrickData(LogicGate_Switch_Data)
 {
 	category = "Logic Bricks";
 	subCategory = "Inputs";
@@ -23,14 +23,14 @@ datablock fxDTSBrickData(Logic1x2fSwitchData)
 	logicPortPos[1] = "0 -1 0";
 	logicPortDir[1] = "3";
 };
-lualogic_registergatedefinition("Logic1x2fSwitchData");
+lualogic_registergatedefinition("LogicGate_Switch_Data");
 
-function Logic1x2fSwitchData::Logic_onInput(%this, %obj, %pos, %norm)
+function LogicGate_Switch_Data::Logic_onInput(%this, %obj, %pos, %norm)
 {
 	%obj.Logic_SetInputState(!%obj.logicInputState);
 }
 
-function Logic1x2fSwitchData::Logic_onAdd(%this, %obj)
+function LogicGate_Switch_Data::Logic_onAdd(%this, %obj)
 {
 	%obj.Logic_SetInputState(%obj.getColorFXID() == 3, true);
 }

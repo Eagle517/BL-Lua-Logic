@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(Logic1x2fANDData : Logic1x2fORData)
+datablock fxDTSBrickData(LogicGate_AND_Data : LogicGate_OR_Data)
 {
 	uiName = "1x2f AND";
 	iconName = $LuaLogic::Path @ "icons/AND";
@@ -6,4 +6,4 @@ datablock fxDTSBrickData(Logic1x2fANDData : Logic1x2fORData)
 	logicUIDesc = "C is true if A and B are true";
 	logic = "gate.ports[3]:setstate(gate.ports[1].state and gate.ports[2].state)";
 };
-lualogic_registergatedefinition("Logic1x2fANDData");
+lualogic_registergatedefinition("LogicGate_AND_Data");

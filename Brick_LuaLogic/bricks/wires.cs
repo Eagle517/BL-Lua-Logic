@@ -323,10 +323,3 @@ datablock fxDTSBrickData(LogicWire2x2fVisualData : brick2x2fData)
 	isLogicWire = true;
 	isLogicVisual = true;
 };
-
-datablock fxDTSBrickData(LogicWire1x1fEventData : LogicWire1x1fData)
-{
-	subCategory = "Wires - Special";
-	uiName = "Event Wire 1x1f";
-	doLogicEvents = true;
-};

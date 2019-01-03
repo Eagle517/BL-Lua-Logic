@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(Logic1x1fDiodeData)
+datablock fxDTSBrickData(LogicGate_Diode_Data)
 {
 	category = "Logic Bricks";
 	subCategory = "Gates";
@@ -30,9 +30,9 @@ datablock fxDTSBrickData(Logic1x1fDiodeData)
 	logicPortUIName[1] = "B";
 	logicPortUIDesc[1] = "";
 };
-lualogic_registergatedefinition("Logic1x1fDiodeData");
+lualogic_registergatedefinition("LogicGate_Diode_Data");
 
-function Logic1x1fDiodeData::onPlant(%this, %obj)
+function LogicGate_Diode_Data::onPlant(%this, %obj)
 {
 	if(lualogic_iscolor("GREEN"))
 		%obj.setColor(lualogic_getcolor("GREEN"));

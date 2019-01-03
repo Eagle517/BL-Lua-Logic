@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(Logic1x2fORData)
+datablock fxDTSBrickData(LogicGate_OR_Data)
 {
 	category = "Logic Bricks";
 	subCategory = "Gates";
@@ -34,4 +34,4 @@ datablock fxDTSBrickData(Logic1x2fORData)
 	logicPortDir[2] = "2";
 	logicPortUIName[2] = "C";
 };
-lualogic_registergatedefinition("Logic1x2fORData");
+lualogic_registergatedefinition("LogicGate_OR_Data");

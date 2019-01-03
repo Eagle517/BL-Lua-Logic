@@ -1,6 +1,6 @@
-datablock fxDTSBrickData(LogicGate__8BitDFlipFlop_Data)
+datablock fxDTSBrickData(LogicGate_8BitDFlipFlop_Data)
 {
-	brickFile = $LuaLogic::Path @ "bricks/blb/8BitDFlipFlop.blb";
+	brickFile = $LuaLogic::Path @ "bricks/blb/1x8f_8i_8o_p.blb";
 	category = "Logic Bricks";
 	subCategory = "Bus";
 	uiName = "8 Bit D FlipFlop";
@@ -117,4 +117,4 @@ datablock fxDTSBrickData(LogicGate__8BitDFlipFlop_Data)
 	logicPortDir[17] = 1;
 	logicPortUIName[17] = "Q0";
 };
-lualogic_registergatedefinition("LogicGate__8BitDFlipFlop_Data");
+lualogic_registergatedefinition("LogicGate_8BitDFlipFlop_Data");

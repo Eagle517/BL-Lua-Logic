@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(LogicGate__8bitAdder_Data)
+datablock fxDTSBrickData(LogicGate_8bitAdder_Data)
 {
 	brickFile = $LuaLogic::Path @ "bricks/blb/8bitAdder.blb";
 	category = "Logic Bricks";
@@ -177,4 +177,4 @@ datablock fxDTSBrickData(LogicGate__8bitAdder_Data)
 	logicPortDir[25] = 0;
 	logicPortUIName[25] = "Carry Out";
 };
-lualogic_registergatedefinition("LogicGate__8bitAdder_Data");
+lualogic_registergatedefinition("LogicGate_8bitAdder_Data");

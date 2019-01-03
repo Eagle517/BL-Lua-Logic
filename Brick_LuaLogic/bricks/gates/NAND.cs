@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(Logic1x2fNANDData : Logic1x2fORData)
+datablock fxDTSBrickData(LogicGate_NAND_Data : LogicGate_OR_Data)
 {
 	uiName = "1x2f NAND";
 	iconName = $LuaLogic::Path @ "icons/NAND";
@@ -6,4 +6,4 @@ datablock fxDTSBrickData(Logic1x2fNANDData : Logic1x2fORData)
 	logicUIDesc = "C is false if A and B are true";
 	logic = "gate.ports[3]:setstate(not (gate.ports[1].state and gate.ports[2].state))";
 };
-lualogic_registergatedefinition("Logic1x2fNANDData");
+lualogic_registergatedefinition("LogicGate_NAND_Data");

@@ -1,4 +1,4 @@
-datablock fxDTSBrickData(Logic1x2fDFlipFlop : Logic1x2fORData)
+datablock fxDTSBrickData(LogicGate_DFlipFlop_Data : LogicGate_OR_Data)
 {
 	subCategory = "Memory";
 	uiName = "D FlipFlop";
@@ -14,4 +14,4 @@ datablock fxDTSBrickData(Logic1x2fDFlipFlop : Logic1x2fORData)
 	logicPortUIName[1] = "D";
 	logicPortUIName[2] = "Q";
 };
-lualogic_registergatedefinition("Logic1x2fDFlipFlop");
+lualogic_registergatedefinition("LogicGate_DFlipFlop_Data");
