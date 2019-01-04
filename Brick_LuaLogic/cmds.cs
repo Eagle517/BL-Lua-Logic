@@ -61,3 +61,22 @@ function serverCmdLI(%client)
 	if(%client.isAdmin || %client.isSuperAdmin)
 		lualogic_send("SINFO;" @ %client);
 }
+
+function serverCmdLG(%client, %n)
+{
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+		if(isObject(%player = %client.player))
+		{
+			%eye = %player.getEyePoint();
+			%vec = %player.getEyeVector();
+			%ray = containerRayCast(%eye, vectorAdd(%eye, vectorScale(%vec, 5*getWord(%player.getScale(), 2))), $TypeMasks::FxBrickObjectType);
+			if(isObject(%hit = firstWord(%ray)))
+			{
+				%data = %hit.getDataBlock();
+				if(%data.isLogicGate)
+					lualogic_send("TEST;" @ %hit @ ";" @ %n);
+			}
+		}
+	}
+}

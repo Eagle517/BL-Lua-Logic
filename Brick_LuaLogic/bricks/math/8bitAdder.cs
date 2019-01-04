@@ -17,16 +17,16 @@ datablock fxDTSBrickData(LogicGate_8bitAdder_Data)
 	logicUIDesc = "";
 
 	logic =
-"local sum = bool_to_int[gate.ports[17].state] " @
+"local c = bool_to_int[gate.ports[17].state] " @
+"local a = 0 " @
+"local b = 0 " @
 "for i = 1, 8 do " @
-	"local n = 2^(i-1) " @
-	"sum = sum + bool_to_int[gate.ports[i].state] * n + bool_to_int[gate.ports[i+8].state] * n " @
+	"a = bool_to_int[gate.ports[i].state] " @
+	"b = bool_to_int[gate.ports[i+8].state] " @
+	"gate.ports[i+17]:setstate(bit.bxor(bit.bxor(a, b), c) == 1) " @
+	"c = bit.bor(bit.band(a, b), bit.band(c, bit.bor(a, b))) " @
 "end " @
-
-"for i = 1, 9 do " @
-	"local n = 2^(i-1) " @
-	"gate.ports[i+17]:setstate(bit.band(sum, n) > 0) " @
-"end";
+"gate.ports[26]:setstate(c == 1)";
 
 	numLogicPorts = 26;
 

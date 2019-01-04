@@ -103,6 +103,8 @@ function LuaLogicTCP::onLine(%this, %line)
 				
 				%data = nextToken(%data, brick, "\t");
 			}
+		case "TEST":
+			talk("Time: " @ getField(%line, 1));
 	}
 }
 

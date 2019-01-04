@@ -5,6 +5,8 @@ datablock fxDTSBrickData(LogicGate_HorizontalPixel_Data)
 	subCategory = "Special";
 	uiName = "Horizontal Pixel";
 	iconName = "";
+	hasPrint = 1;
+	printAspectRatio = "Logic";
 	orientationFix = 3;
 
 	isLogic = true;
@@ -14,7 +16,7 @@ datablock fxDTSBrickData(LogicGate_HorizontalPixel_Data)
 	logicUIName = "Horizontal Pixel";
 	logicUIDesc = "";
 
-	logic = "gate:cb(gate.ports[1].state, gate.ports[2].state, gate.ports[3].state)";
+	logic = "gate:cb(\"3\t\" .. bool_to_int[gate.ports[1].state] .. \"\t\" .. bool_to_int[gate.ports[2].state] .. \"\t\" .. bool_to_int[gate.ports[3].state])";
 
 	numLogicPorts = 3;
 

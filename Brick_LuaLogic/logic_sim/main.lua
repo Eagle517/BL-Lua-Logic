@@ -235,6 +235,10 @@ while 1 do
 			elseif data[i] == "TICK" then
 				sim:tick()
 				ticks = ticks + 1
+			elseif data[i] == "TEST" then
+				local gate = sim:getgatebyref(tonumber(data[i+1]))
+				gate:testlogic(tonumber(data[i+2]))
+				i = i + 2
 			end
 
 			i = i + 1

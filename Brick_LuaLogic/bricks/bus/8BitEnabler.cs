@@ -22,7 +22,7 @@ datablock fxDTSBrickData(LogicGate_8BitEnabler_Data)
 "		gate.ports[i+10]:setstate(gate.ports[i].state) " @
 "	end " @
 "	gate.ports[10]:setstate(true) " @
-"else " @
+"elseif gate.ports[9]:isfalling() then" @
 "	for i = 1, 8 do " @
 "		gate.ports[i+10]:setstate(false) " @
 "	end " @
