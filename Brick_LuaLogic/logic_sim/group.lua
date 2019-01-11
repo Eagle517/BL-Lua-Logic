@@ -80,7 +80,7 @@ function Group:addport(port)
 	if port.type == PortTypes.output then
 		self.out_ports[port] = port
 		self.nout_ports = self.nout_ports + 1
-		self:setstate(port.state)
+		sim:queuegroup(self)
 	elseif port.type == PortTypes.input then
 		self.in_ports[port] = port
 		self.nin_ports = self.nin_ports + 1

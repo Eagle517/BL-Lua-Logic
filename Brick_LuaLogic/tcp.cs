@@ -5,7 +5,11 @@ function LuaLogicTCP::sendData(%this)
 
 	if(%this.data !$= "")
 	{
-		%this.send(%this.data @ "\n");
+		%data = %this.data;
+		while(strpos(%data, ";;") != -1)
+			%data = strReplace(%data, ";;", "; ;");
+		
+		%this.send(%data @ "\n");
 		%this.data = "";
 	}
 }

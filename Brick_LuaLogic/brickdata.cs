@@ -23,7 +23,21 @@ exec("./bricks/bus/8BitDFlipFlop.cs");
 exec("./bricks/inputs/switch.cs");
 
 //Math
+	//Addition
+exec("./bricks/math/HalfAdder.cs");
+exec("./bricks/math/FullAdder.cs");
 exec("./bricks/math/8bitAdder.cs");
+
+	//Subtraction
+exec("./bricks/math/HalfSubtractor.cs");
+exec("./bricks/math/FullSubtractor.cs");
+exec("./bricks/math/8bitSubtractor.cs");
+
+	//Multiplication
+exec("./bricks/math/8bitMultiplier.cs");
+
+	//Division
+exec("./bricks/math/8bitDivisor.cs");
 
 //Memory
 exec("./bricks/memory/DFlipFlop.cs");

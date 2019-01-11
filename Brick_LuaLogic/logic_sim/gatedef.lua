@@ -1,4 +1,5 @@
 GateDefinition = {
+	ports = {},
 	logic = function(gate) end
 }
 
@@ -13,6 +14,8 @@ function GateDefinition:new(objref, name, description, logic, ports)
 	local logicfunc = loadstring(tostring(logic))
 	if logicfunc ~= nil then
 		o.logic = loadstring("return function(gate) " .. tostring(logic) .. " end")()
+	else
+		print("Error loading logic function for " .. (name or ""))
 	end
 
 	setmetatable(o, self)
